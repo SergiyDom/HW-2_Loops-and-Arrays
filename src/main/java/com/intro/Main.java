@@ -6,48 +6,36 @@ public class Main {
     public static void main(String[] args) {
         ArrayInitialization intArr = new ArrayInitialization();
 
-        int[] arr = intArr.initialization();
+        int[] arr = intArr.intArrInit();
+        System.out.println("Array - " + Arrays.toString(arr));
+
         int min = intArr.minArg(arr);
+        System.out.println("min - " + min);
+
         int max = intArr.maxArg(arr);
+        System.out.println("max - " + max);
 
-        System.out.println(Arrays.toString(arr));
-        System.out.println(min);
-        System.out.println(max);
-        System.out.println(Arrays.toString(sortIncrement(arr)));
-        System.out.println(Arrays.toString(sortDecrement(arr)));
-        System.out.println(sumArray(arr));
+        int[] sortInc = intArr.sortIncrement(arr);
+        System.out.println("sortIncrement - " + Arrays.toString(sortInc));
+
+        int[] sortDec = intArr.sortDecrement(arr);
+        System.out.println("sortDecrement - " + Arrays.toString(sortDec));
+
+        int sumArr = intArr.sumArray(arr);
+        System.out.println("sumArray - " + sumArr);
+
+        int[] sqArr = intArr.squArr(arr);
+        System.out.println("sqArr - " + Arrays.toString(sqArr));
+
+        StringOperationArr soa = new StringOperationArr();
+        System.out.println(soa.stringOperationArr(soa.stringArrInit()));
+
+        int[]givenArray = new int[]{3,2,3,1,4,2,8,3};
+        System.out.println(Arrays.toString(new DuplicateValues().duplicateValues(givenArray)));
     }
 
-    public static int[] sortIncrement(int[] arr) {
-        int count;
-        for (int i = 0; i < arr.length -1; i++) {
-            for (int j = arr.length - 1; j > i; j--) {
-                if (arr[i] > arr[j]) {
-                    count = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = count;
-                }
-            }
-        }
-        return arr;
-    }
 
-    public static int[] sortDecrement(int[] arr){
-        int count;
-        for (int i = 0; i < arr.length /2; i++) {
-            count = arr[i];
-            arr[i] = arr[arr.length-1-i];
-            arr[arr.length-1-i] = count;
-        }
 
-        return arr;
-    }
 
-    public static int sumArray(int[]arr){
-        int sum = 0;
-        for (int i:arr){
-            sum += i;
-        }
-        return sum;
-    }
+
 }

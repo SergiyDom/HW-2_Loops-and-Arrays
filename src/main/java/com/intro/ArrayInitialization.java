@@ -1,10 +1,8 @@
 package com.intro;
 
-import java.util.Arrays;
+public class ArrayInitialization extends MathOperationsArr {
 
-public class ArrayInitialization extends MinMaxArgs {
-
-    public static int[] initialization() {
+    public  int[] intArrInit() {
         int[] intArray = new int[20];
         for (int i = 0; i < intArray.length; i++) {
             if (i % 2 == 0) {
@@ -18,5 +16,20 @@ public class ArrayInitialization extends MinMaxArgs {
             }
         }
         return intArray;
+    }
+
+    public String[][] stringArrInit(){
+        String[][] strArr = new String[3][3];
+        strArr[0][0] = "I";
+        strArr[0][1] = "you";
+        strArr[0][2] = "we";
+        strArr[1][0] = "hate";
+        strArr[1][1] = "Love";
+        strArr[1][2] = "learn";
+        strArr[2][0] = "Python";
+        strArr[2][1] = "C++";
+        strArr[2][2] = "Java";
+
+        return strArr;
     }
 }
