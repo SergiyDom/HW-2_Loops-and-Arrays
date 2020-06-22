@@ -2,6 +2,8 @@ package com.intro;
 
 import java.util.Arrays;
 
+import static com.intro.DuplicateValues.duplicateValues;
+
 public class Main {
     public static void main(String[] args) {
         ArrayInitialization intArr = new ArrayInitialization();
@@ -30,12 +32,7 @@ public class Main {
         StringOperationArr soa = new StringOperationArr();
         System.out.println(soa.stringOperationArr(soa.stringArrInit()));
 
-        int[]givenArray = new int[]{3,2,3,1,4,2,8,3};
-        System.out.println(Arrays.toString(new DuplicateValues().duplicateValues(givenArray)));
+        int[] givenArray = new int[]{3, 2, 3, 1, 4, 2, 8, 3};
+        System.out.println(Arrays.toString(duplicateValues(givenArray)));
     }
-
-
-
-
-
 }

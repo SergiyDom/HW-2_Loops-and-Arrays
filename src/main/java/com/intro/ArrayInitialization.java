@@ -2,7 +2,7 @@ package com.intro;
 
 public class ArrayInitialization extends MathOperationsArr {
 
-    public  int[] intArrInit() {
+    public int[] intArrInit() {
         int[] intArray = new int[20];
         for (int i = 0; i < intArray.length; i++) {
             if (i % 2 == 0) {
@@ -18,7 +18,7 @@ public class ArrayInitialization extends MathOperationsArr {
         return intArray;
     }
 
-    public String[][] stringArrInit(){
+    public String[][] stringArrInit() {
         String[][] strArr = new String[3][3];
         strArr[0][0] = "I";
         strArr[0][1] = "you";

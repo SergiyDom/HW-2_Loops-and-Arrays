@@ -3,7 +3,7 @@ package com.intro;
 public class MathOperationsArr {
     public int minArg(int[] arr) {
         int min = arr[0];
-        for (int i = 0; i < arr.length; i++) {
+        for (int i : arr) {
             if (min > arr[i]) {
                 min = arr[i];
             }
@@ -42,7 +42,6 @@ public class MathOperationsArr {
             arr[i] = arr[arr.length - 1 - i];
             arr[arr.length - 1 - i] = count;
         }
-
         return arr;
     }
 
@@ -55,10 +54,8 @@ public class MathOperationsArr {
     }
 
     public int[] squArr(int[] arr) {
-        int i = 0;
-        while (i < arr.length) {
+        for (int i = 0; i < arr.length; i++) {
             arr[i] = (int) Math.pow(arr[i], 2);
-            i++;
         }
         return arr;
     }
